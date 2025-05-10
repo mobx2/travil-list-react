@@ -1,5 +1,3 @@
-
-
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
 
 * {
@@ -55,7 +53,8 @@ h3 {
 
 button,
 select,
-input {
+input,
+.clear {
   background-color: #ffebb3;
   color: #5a3e2b;
   font-family: inherit;
@@ -68,6 +67,11 @@ input {
 }
 
 .add-form button {
+  text-transform: uppercase;
+  background-color: #76c7ad;
+}
+
+.add-form .clear {
   text-transform: uppercase;
   background-color: #76c7ad;
 }
@@ -131,4 +135,107 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .app {
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  h1 {
+    font-size: 6rem;
+    padding: 1.6rem 0;
+    word-spacing: 15px;
+  }
+
+  .add-form {
+    padding: 2rem 0;
+  }
+
+  .add-form h3 {
+    font-size: 2rem;
+    margin-right: 1.2rem;
+  }
+
+  button,
+  select,
+  input,
+  .clear {
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .list {
+    padding: 3rem 0;
+  }
+
+  .list ul {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats {
+    padding: 2.4rem 0;
+    font-size: 1.6rem;
+  }
+
+  .actions button,
+  .list select {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media Queries for smaller screens (mobile) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 5rem;
+    padding: 1.2rem 0;
+  }
+
+  .add-form {
+    padding: 1.6rem 0;
+  }
+
+  .add-form h3 {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+
+  button,
+  select,
+  input,
+  .clear {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .list {
+    padding: 2rem 0;
+  }
+
+  .list ul {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats {
+    padding: 2rem 0;
+    font-size: 1.4rem;
+  }
+
+  .actions button,
+  .list select {
+    font-size: 1.2rem;
+  }
 }
